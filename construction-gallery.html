@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BANNA Construction Gallery — Premium Construction Projects Portfolio." />
+  <title>Construction Gallery | BANNA Construction</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <div class="social-sidebar">
+    <a href="https://wa.me/919876543210" target="_blank" class="social-icon-btn whatsapp-icon"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+919876543210" class="social-icon-btn call-icon"><i class="fa fa-phone"></i></a>
+    <a href="https://facebook.com" target="_blank" class="social-icon-btn facebook-icon"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://instagram.com" target="_blank" class="social-icon-btn instagram-icon"><i class="fab fa-instagram"></i></a>
+  </div>
+
+  <div id="loader">
+    <div class="loader-logo">CONSTRUCTION</div>
+    <div class="loader-bar"></div>
+    <div class="loader-percent">0%</div>
+  </div>
+
+  <button id="scrollTop"><i class="fa fa-arrow-up"></i></button>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-main">BANNA</span>
+      <span class="nav-logo-sub">Premium Construction & Interiors</span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">HOME</a></li>
+      <li><a href="services.html" class="nav-link">SERVICES</a></li>
+      <li><a href="construction-gallery.html" class="nav-link active">CONSTRUCTION</a></li>
+      <li><a href="interior-gallery.html" class="nav-link">INTERIORS</a></li>
+      <li><a href="about.html" class="nav-link">ABOUT</a></li>
+      <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">GET QUOTE</a>
+    <div class="nav-hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="hero" style="min-height: 400px; display: flex; align-items: center; padding-top: 200px;">
+    <div class="hero-content" style="max-width: 100%; grid-column: span 2;">
+      <div class="hero-label">
+        <div class="hero-label-line"></div>
+        <span class="hero-label-text">OUR PORTFOLIO</span>
+      </div>
+      <h1 class="hero-title">Construction <span class="cyan">Gallery</span></h1>
+      <p class="hero-subtitle">
+        A showcase of premium residential and commercial construction projects — each one a testament to our craftsmanship and dedication to excellence.
+      </p>
+    </div>
+    <div class="hero-stripe"></div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section style="background: var(--bg-dark); border-top: 1px solid rgb(242, 246, 247); padding: 80px 0;">
+    <div class="container">
+      <!-- Filter Buttons -->
+      <div style="display: flex; gap: 10px; margin-bottom: 50px; flex-wrap: wrap;" class="gallery-filter">
+        <button class="filter-btn active" data-filter="all">ALL PROJECTS</button>
+        <button class="filter-btn" data-filter="residential">RESIDENTIAL</button>
+        <button class="filter-btn" data-filter="commercial">COMMERCIAL</button>
+        <button class="filter-btn" data-filter="villa">VILLAS</button>
+
+      
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-masonry" id="constructionGallery" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+        
+        <div class="gallery-item" data-category="villa residential">
+          <img class="gallery-img" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="The Emerald Villa Estate" />
+          <div class="gallery-hover">
+            <div class="gallery-hover-icon"><i class="fa fa-expand"></i></div>
+            <div class="gallery-hover-label">The Emerald Villa Estate · Chennai</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="commercial">
+          <img class="gallery-img" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" alt="Corporate Tower" />
+          <div class="gallery-hover">
+            <div class="gallery-hover-icon"><i class="fa fa-expand"></i></div>
+            <div class="gallery-hover-label">Prestige Corporate Hub · Bangalore</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="residential">
+          <img class="gallery-img" src="https://images.unsplash.com/photo-1600607687939-ce8a6f349479?w=800&q=80" alt="Crystal Residences" />
+          <div class="gallery-hover">
+            <div class="gallery-hover-icon"><i class="fa fa-expand"></i></div>
+            <div class="gallery-hover-label">Crystal Residences · Hyderabad</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="villa residential">
+          <img class="gallery-img" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80" alt="Sapphire Villa" />
+          <div class="gallery-hover">
+            <div class="gallery-hover-icon"><i class="fa fa-expand"></i></div>
+            <div class="gallery-hover-label">Sapphire Villa · Chennai</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="commercial">
+          <img class="gallery-img" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Tech Park" />
+          <div class="gallery-hover">
+            <div class="gallery-hover-icon"><i class="fa fa-expand"></i></div>
+            <div class="gallery-hover-label">Nexus Tech Park · Coimbatore</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="residential">
+          <img class="gallery-img" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80" alt="Residential Complex" />
+          <div class="gallery-hover">
+            <div class="gallery-hover-icon"><i class="fa fa-expand"></i></div>
+            <div class="gallery-hover-label">Modern Residences · Pondicherry</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="residential">
+          <img class="gallery-img" src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800&q=80" alt="Sky Towers" />
+          <div class="gallery-hover">
+            <div class="gallery-hover-icon"><i class="fa fa-expand"></i></div>
+            <div class="gallery-hover-label">Sky Towers Apartments · Mumbai</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="commercial">
+          <img class="gallery-img" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Business Complex" />
+          <div class="gallery-hover">
+            <div class="gallery-hover-icon"><i class="fa fa-expand"></i></div>
+            <div class="gallery-hover-label">Marina Business Complex · Chennai</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="villa residential">
+          <img class="gallery-img" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80" alt="Modern Villa" />
+          <div class="gallery-hover">
+            <div class="gallery-hover-icon"><i class="fa fa-expand"></i></div>
+            <div class="gallery-hover-label">The Azure Retreat · Ooty</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose"><i class="fa fa-times"></i></button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fa fa-chevron-left"></i></button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="Gallery Image" />
+    <button class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fa fa-chevron-right"></i></button>
+  </div>
+
+  <!-- STATISTICS -->
+  <section class="statistics">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-block">
+          <div class="stat-number">350<span>+</span></div>
+          <div class="stat-text">Construction Projects</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-number">180<span>+</span></div>
+          <div class="stat-text">Villas & Homes Built</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-number">120<span>+</span></div>
+          <div class="stat-text">Commercial Structures</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-number">15<span>+</span></div>
+          <div class="stat-text">Cities Covered</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Want to See Your Project <em>Here?</em></h2>
+      <p>Start your premium construction journey with BANNA today and join our portfolio of excellence.</p>
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1;">
+        <a href="contact.html" class="btn-primary">
+          <span>START YOUR PROJECT</span>
+          <i class="fa fa-arrow-right"></i>
+        </a>
+        <a href="interior-gallery.html" class="btn-outline">
+          <span>VIEW INTERIOR GALLERY</span>
+          <i class="fa fa-couch"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">BANNA</div>
+          <p>Where architectural excellence meets luxury craftsmanship since 2009.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://wa.me/919876543210" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Residential Construction</a></li>
+            <li><a href="services.html">Commercial Construction</a></li>
+            <li><a href="services.html">Interior Design</a></li>
+            <li><a href="services.html">Architecture Planning</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="construction-gallery.html">Construction Gallery</a></li>
+            <li><a href="interior-gallery.html">Interior Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="contact-item">
+            <i class="fa fa-location-dot"></i>
+            <div>No. 12, Prestige Tower, Anna Salai, Chennai, TN 600002</div>
+          </div>
+          <div class="contact-item">
+            <i class="fa fa-phone"></i>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+          </div>
+          <div class="contact-item">
+            <i class="fa fa-envelope"></i>
+            <a href="mailto:hello@bannaconstruction.in">hello@bannaconstruction.in</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 BANNA Construction. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
