@@ -526,3 +526,76 @@ function initRevealOnLoad() {
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(initRevealOnLoad, 100);
 });
+
+/* ============================================================
+   MOBILE BOTTOM NAVIGATION BAR SCRIPT
+   Add this to your script.js file or include separately
+   ============================================================ */
+
+// Initialize Mobile Bottom Navigation
+(function initMobileBottomNav() {
+  // Only add on mobile screens
+  if (window.innerWidth > 768) return;
+
+  // Get current page from URL
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+  // Create bottom nav HTML
+  const bottomNavHTML = `
+    <nav class="mobile-bottom-nav">
+      <a href="index.html" class="mobile-nav-item ${currentPage === '' || currentPage === 'index.html' ? 'active' : ''}">
+        <i class="fa fa-home mobile-nav-icon"></i>
+        <span class="mobile-nav-label">Home</span>
+      </a>
+      <a href="services.html" class="mobile-nav-item ${currentPage === 'services.html' ? 'active' : ''}">
+        <i class="fa fa-briefcase mobile-nav-icon"></i>
+        <span class="mobile-nav-label">Services</span>
+      </a>
+      <a href="construction-gallery.html" class="mobile-nav-item ${currentPage === 'construction-gallery.html' ? 'active' : ''}">
+        <i class="fa fa-building mobile-nav-icon"></i>
+        <span class="mobile-nav-label">Construction</span>
+      </a>
+      <a href="interior-gallery.html" class="mobile-nav-item ${currentPage === 'interior-gallery.html' ? 'active' : ''}">
+        <i class="fa fa-couch mobile-nav-icon"></i>
+        <span class="mobile-nav-label">Interiors</span>
+      </a>
+      <a href="about.html" class="mobile-nav-item ${currentPage === 'about.html' ? 'active' : ''}">
+        <i class="fa fa-info-circle mobile-nav-icon"></i>
+        <span class="mobile-nav-label">About</span>
+      </a>
+      <a href="contact.html" class="mobile-nav-item ${currentPage === 'contact.html' ? 'active' : ''}">
+        <i class="fa fa-envelope mobile-nav-icon"></i>
+        <span class="mobile-nav-label">Contact</span>
+      </a>
+    </nav>
+  `;
+
+  // Insert before closing body tag
+  document.body.insertAdjacentHTML('beforeend', bottomNavHTML);
+
+  // Add click feedback
+  const navItems = document.querySelectorAll('.mobile-nav-item');
+  navItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+      // Remove active class from all items
+      navItems.forEach(nav => nav.classList.remove('active'));
+      // Add active class to clicked item
+      this.classList.add('active');
+    });
+
+    // Haptic feedback on click (if supported)
+    item.addEventListener('click', function() {
+      if (navigator.vibrate) {
+        navigator.vibrate(10);
+      }
+    });
+  });
+
+  // Update active state on window resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      const nav = document.querySelector('.mobile-bottom-nav');
+      if (nav) nav.remove();
+    }
+  });
+})();
