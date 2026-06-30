@@ -1758,171 +1758,6 @@ section {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
-
-/* ============================================================
-   RESPONSIVE DESIGN
-   ============================================================ */
-@media (max-width: 1400px) {
-  .container { padding: 0 48px; }
-  .navbar { left: 18px; right: 18px; padding: 14px 32px; }
-}
-
-@media (max-width: 1200px) {
-  .container { padding: 0 40px; }
-  .navbar { padding: 13px 28px; }
-
-  .hero {
-    padding: 150px 40px 80px;
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-
-  .hero-image { height: 420px; }
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .projects-grid { grid-template-columns: repeat(2, 1fr); }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-
-  .footer .container { padding: 0 32px; }
-}
-
-@media (max-width: 768px) {
-  .container { padding: 0 24px; }
-  .navbar {
-    left: 12px;
-    right: 12px;
-    padding: 12px 20px;
-    border-radius: var(--radius-md);
-  }
-
-  .nav-menu { display: none; }
-  .nav-hamburger { display: flex; }
-
-  .hero {
-    padding: 120px 20px 70px;
-    min-height: auto;
-    grid-template-columns: 1fr;
-  }
-
-  .hero-title { font-size: 2.1rem; }
-  .hero-image { height: 300px; }
-
-  .hero-stats {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    padding: 48px 0 28px;
-  }
-
-  .footer .container { padding: 0 24px; }
-
-  .cta-banner { padding: 60px 16px; }
-  .cta-banner .container { padding: 50px 28px; }
-
-  section { padding: 64px 0; }
-
-  .social-sidebar {
-    right: 14px;
-    bottom: 84px;
-  }
-
-  #scrollTop {
-    bottom: 20px;
-    right: 20px;
-    width: 46px;
-    height: 46px;
-  }
-
-  #interiorGallery,
-  #constructionGallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container { padding: 0 16px; }
-  .hero { padding: 110px 14px 60px; }
-  .hero-title { font-size: 1.7rem; }
-  .section-title { font-size: 1.5rem; }
-
-  .hero-actions { flex-direction: column; }
-
-  .btn-primary,
-  .btn-outline {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .stats-grid { grid-template-columns: 1fr; }
-  .stat-number { font-size: 2.4rem; }
-
-  #interiorGallery,
-  #constructionGallery {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-filter { gap: 8px; }
-
-  .filter-btn {
-    font-size: 0.54rem;
-    padding: 10px 16px;
-  }
-}
-
-/* ============================================================
-   REDUCED MOTION
-   ============================================================ */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-.loader-logo-img{
-    width: 320px;
-    max-width: 90vw;
-    height: auto;
-    display: block;
-    margin-bottom: 30px;
-}
-
-.nav-logo img {
-    width: 160px;
-    height: auto;
-}
-
 /* ============================================================
    MOBILE RESPONSIVE IMPROVEMENTS + BOTTOM NAV
    Updated: Better spacing, padding, and mobile navigation
@@ -2640,3 +2475,30 @@ section {
     width: 80px; 
   }
 }
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.loader-logo-img{
+    width: 320px;
+    max-width: 90vw;
+    height: auto;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.nav-logo img {
+    width: 160px;
+    height: auto;
+}
+
