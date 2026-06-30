@@ -2278,6 +2278,7 @@ section {
 
   .lightbox-prev { left: 8px; }
   .lightbox-next { right: 8px; }
+
 /* ============================================================
    MOBILE-FIRST RESPONSIVE FIX
    ONLY mobile improvements (320px-768px)
@@ -3398,6 +3399,7 @@ section {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 /* ============================================================
    REDUCED MOTION
    ============================================================ */
@@ -3423,4 +3425,3 @@ section {
     width: 160px;
     height: auto;
 }
-
