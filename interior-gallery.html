@@ -256,6 +256,49 @@
     </div>
   </footer>
 
+
+<script>
+(function initMobileBottomNav() {
+  if (window.innerWidth > 768) return;
+  
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  
+  const bottomNavHTML = `
+    <nav class="mobile-bottom-nav">
+      <a href="index.html" class="mobile-nav-item ${currentPage === '' || currentPage === 'index.html' ? 'active' : ''}">
+        <i class="fa fa-home mobile-nav-icon"></i>
+      </a>
+      <a href="services.html" class="mobile-nav-item ${currentPage === 'services.html' ? 'active' : ''}">
+        <i class="fa fa-briefcase mobile-nav-icon"></i>
+      </a>
+      <a href="construction-gallery.html" class="mobile-nav-item ${currentPage === 'construction-gallery.html' ? 'active' : ''}">
+        <i class="fa fa-building mobile-nav-icon"></i>
+      </a>
+      <a href="interior-gallery.html" class="mobile-nav-item ${currentPage === 'interior-gallery.html' ? 'active' : ''}">
+        <i class="fa fa-couch mobile-nav-icon"></i>
+      </a>
+      <a href="about.html" class="mobile-nav-item ${currentPage === 'about.html' ? 'active' : ''}">
+        <i class="fa fa-info-circle mobile-nav-icon"></i>
+      </a>
+      <a href="contact.html" class="mobile-nav-item ${currentPage === 'contact.html' ? 'active' : ''}">
+        <i class="fa fa-envelope mobile-nav-icon"></i>
+      </a>
+    </nav>
+  `;
+  
+  document.body.insertAdjacentHTML('beforeend', bottomNavHTML);
+  
+  const navItems = document.querySelectorAll('.mobile-nav-item');
+  navItems.forEach(item => {
+    item.addEventListener('click', function() {
+      navItems.forEach(nav => nav.classList.remove('active'));
+      this.classList.add('active');
+      if (navigator.vibrate) navigator.vibrate(10);
+    });
+  });
+})();
+</script>
+
   <script src="script.js"></script>
 </body>
 </html>
